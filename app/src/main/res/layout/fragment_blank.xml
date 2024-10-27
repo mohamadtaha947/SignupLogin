@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUserFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:ems="10"
+            android:hint="Id..."
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etfirstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="FirstName..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etId"
+            app:layout_constraintTop_toBottomOf="@+id/etId" />
+
+        <EditText
+            android:id="@+id/etlastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="LastName..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etfirstname"
+            app:layout_constraintTop_toBottomOf="@+id/etfirstname" />
+
+        <EditText
+            android:id="@+id/etbirthDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:hint="birthdate..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etlastname"
+            app:layout_constraintTop_toBottomOf="@+id/etlastname" />
+
+        <EditText
+            android:id="@+id/etphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:ems="10"
+            android:hint="Phone..."
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/etbirthDate"
+            app:layout_constraintTop_toBottomOf="@+id/etbirthDate" />
+
+        <EditText
+            android:id="@+id/etusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="3dp"
+            android:ems="10"
+            android:hint="UserName..."
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/etphone"
+            app:layout_constraintTop_toBottomOf="@+id/etphone" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etusername" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

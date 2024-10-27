@@ -95,7 +95,6 @@ public class Forget_passwordFragment extends Fragment {
 
                         }
                     }
-
                 });
             }
         });

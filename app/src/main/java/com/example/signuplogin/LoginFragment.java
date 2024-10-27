@@ -116,6 +116,7 @@ public class LoginFragment extends Fragment {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(getActivity(), "Successfully login up", Toast.LENGTH_SHORT).show();
+                        gotoAdduserfragment();
                     }
 
                 }).addOnFailureListener(new OnFailureListener() {
@@ -124,10 +125,15 @@ public class LoginFragment extends Fragment {
                         Toast.makeText(getActivity(), "Something went wrong!", Toast.LENGTH_SHORT).show();
                     }
                 });
-
             }
         });
     }
+    private void gotoAdduserfragment() {
+        FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutsMain,new AddUserFragment());
+        ft.commit();
+    }
+
     private void gotoSignupFragment() {
         FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutsMain,new SignupFragment());

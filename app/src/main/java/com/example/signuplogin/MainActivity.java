@@ -1,5 +1,6 @@
 package com.example.signuplogin;
 
+import android.app.Fragment;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -22,8 +23,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         gotologinFragment();
-
     }
+
+
+
+
 
     private void gotologinFragment() {
         FragmentTransaction ft=getSupportFragmentManager().beginTransaction();

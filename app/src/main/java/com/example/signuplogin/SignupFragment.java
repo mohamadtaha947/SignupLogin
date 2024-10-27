@@ -23,7 +23,7 @@ import com.google.firebase.auth.AuthResult;
  */
 public class SignupFragment extends Fragment {
 
-    private EditText etUsername,etpassword;
+    private EditText etUsername, etpassword;
     private Button btnSignup;
     private FireBaseServices fbs;
 
@@ -77,10 +77,10 @@ public class SignupFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        fbs=FireBaseServices.getInstance();
-        etUsername=getView().findViewById(R.id.etUserNameSignup);
-        etpassword=getView().findViewById(R.id.etpasswordSignup);
-        btnSignup=getView().findViewById(R.id.btnsignup);
+        fbs = FireBaseServices.getInstance();
+        etUsername = getView().findViewById(R.id.etUserNameSignup);
+        etpassword = getView().findViewById(R.id.etpasswordSignup);
+        btnSignup = getView().findViewById(R.id.btnsignup);
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
