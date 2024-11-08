@@ -51,6 +51,7 @@ public class AddUserFragment extends Fragment {
         etbirtdate=getActivity().findViewById(R.id.etbirthDate);
         etphone=getActivity().findViewById(R.id.etphone);
         fbs=FireBaseServices.getInstance();
+        btnAdd=getActivity().findViewById(R.id.btnAdd);
         etusername=getActivity().findViewById(R.id.etusername);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +69,7 @@ public class AddUserFragment extends Fragment {
                     return;
                 }
                 User rest=new User("",username,phone,birthdate,lastname,firstname,Id);
-                fbs.getFire().collection("User").add(rest).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                fbs.getFire().collection("users").add(rest).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Toast.makeText(getActivity(), "successs!", Toast.LENGTH_SHORT).show();
