@@ -1,9 +1,12 @@
 package com.example.signuplogin;
 
+import static android.app.PendingIntent.getActivity;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,6 +76,7 @@ public class AddUserFragment extends Fragment {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Toast.makeText(getActivity(), "successs!", Toast.LENGTH_SHORT).show();
+                        gotoAllUsersFragment();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -117,5 +121,10 @@ public class AddUserFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_blank, container, false);
+    }
+    private void gotoAllUsersFragment(){
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.main,new AllUserFragment());
+        ft.commit();
     }
 }
