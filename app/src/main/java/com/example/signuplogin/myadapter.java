@@ -33,7 +33,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull myadapter.MyViewHolder holder, int position) {
         User s = usersList.get(position);
         holder.tvusernameUseritem.setText(s.getUserName());
-        holder.tvphoneUseritem.setText(s.getPhoto());
+        holder.tvphoneUseritem.setText(s.getPhone());
     }
 
     @Override

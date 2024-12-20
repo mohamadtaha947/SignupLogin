@@ -83,6 +83,10 @@ public class LoginFragment extends Fragment {
     public void onStart() {
         super.onStart();
         fbs=FireBaseServices.getInstance();
+        if (fbs.getAuth().getCurrentUser() != null)
+        {
+            gotoAllUsersFragment();
+        }
         etUsername=getView().findViewById(R.id.etusernamelogin);
         etpassword=getView().findViewById(R.id.etpasswordlogin);
         btnLogin=getView().findViewById(R.id.btnloginlogin);
@@ -116,7 +120,7 @@ public class LoginFragment extends Fragment {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(getActivity(), "Successfully login up", Toast.LENGTH_SHORT).show();
-                        gotoAdduserfragment();
+                        gotoAllUsersFragment();
                     }
 
                 }).addOnFailureListener(new OnFailureListener() {
@@ -142,6 +146,12 @@ public class LoginFragment extends Fragment {
     private void gotoforgotFragment() {
         FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.FrameLayoutsMain,new Forget_passwordFragment());
+        ft.commit();
+    }
+
+    private void gotoAllUsersFragment(){
+        FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.FrameLayoutsMain,new AllUserFragment());
         ft.commit();
     }
 }

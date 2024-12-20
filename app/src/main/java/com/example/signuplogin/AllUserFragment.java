@@ -90,7 +90,7 @@ public class AllUserFragment extends Fragment {
         rvusers.setAdapter(adapter);
         rvusers.setHasFixedSize(true);
         rvusers.setLayoutManager(new LinearLayoutManager(getActivity()));
-        fbs.getFire().collection("restaurants").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        fbs.getFire().collection("users").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
@@ -106,7 +106,7 @@ public class AllUserFragment extends Fragment {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(getActivity(), "No data available", Toast.LENGTH_SHORT).show();
-                Log.e("AllRestaurantsFragment", e.getMessage());
+                Log.e("AllUserFragment", e.getMessage());
             }
         });
     }

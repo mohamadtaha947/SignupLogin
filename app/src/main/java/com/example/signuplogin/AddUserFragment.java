@@ -124,7 +124,7 @@ public class AddUserFragment extends Fragment {
     }
     private void gotoAllUsersFragment(){
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.main,new AllUserFragment());
+        ft.replace(R.id.FrameLayoutsMain,new AllUserFragment());
         ft.commit();
     }
 }
