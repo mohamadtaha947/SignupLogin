@@ -2,6 +2,7 @@ package com.example.signuplogin;
 
 import static android.app.PendingIntent.getActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.firestore.DocumentReference;
 
 /**
@@ -26,7 +28,7 @@ import com.google.firebase.firestore.DocumentReference;
  */
 public class AddUserFragment extends Fragment {
     private EditText etid,etfirstname,etlastname,etbirtdate,etphone,etusername;
-    private Button btnAdd;
+    private Button  btnAdd;
     private FireBaseServices fbs;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -47,6 +49,7 @@ public class AddUserFragment extends Fragment {
         connectComponents();
     }
 
+    @SuppressLint("WrongViewCast")
     private void connectComponents() {
         etid=getActivity().findViewById(R.id.etId);
         etfirstname=getActivity().findViewById(R.id.etfirstname);
@@ -56,6 +59,7 @@ public class AddUserFragment extends Fragment {
         fbs=FireBaseServices.getInstance();
         btnAdd=getActivity().findViewById(R.id.btnAdd);
         etusername=getActivity().findViewById(R.id.etusername);
+        btnAdd=getActivity().findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -14,27 +14,22 @@
             android:id="@+id/etpasswordSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="101dp"
-            android:layout_marginBottom="28dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="16dp"
             android:ems="10"
             android:hint="password..."
             android:inputType="textPassword"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnsignup"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ivPhotoSignupFragment"
+            app:layout_constraintEnd_toEndOf="@+id/etUserNameSignup"
             app:layout_constraintTop_toBottomOf="@+id/etUserNameSignup" />
 
         <EditText
             android:id="@+id/etUserNameSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="148dp"
-            android:layout_marginEnd="101dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="171dp"
+            android:layout_marginBottom="43dp"
             android:ems="10"
             android:hint="username..."
             android:inputType="textEmailAddress"
@@ -46,20 +41,27 @@
 
         <Button
             android:id="@+id/btnsignup"
-            android:layout_width="wrap_content"
+            android:layout_width="94dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="155dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="159dp"
-            android:layout_marginBottom="397dp"
+            android:layout_marginBottom="174dp"
             android:background="#E91E63"
             android:text="SignUp"
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPhotoSignupFragment"
+            app:rippleColor="#673AB7" />
+
+        <ImageView
+            android:id="@+id/ivPhotoSignupFragment"
+            android:layout_width="121dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="77dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnsignup"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etpasswordSignup"
-            app:rippleColor="#673AB7" />
+            tools:src="@color/cardview_dark_background" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

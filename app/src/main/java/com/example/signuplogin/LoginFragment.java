@@ -83,10 +83,12 @@ public class LoginFragment extends Fragment {
     public void onStart() {
         super.onStart();
         fbs=FireBaseServices.getInstance();
-        if (fbs.getAuth().getCurrentUser() != null)
+        /*if (fbs.getAuth().getCurrentUser() != null)
         {
             gotoAllUsersFragment();
         }
+
+         */
         etUsername=getView().findViewById(R.id.etusernamelogin);
         etpassword=getView().findViewById(R.id.etpasswordlogin);
         btnLogin=getView().findViewById(R.id.btnloginlogin);
