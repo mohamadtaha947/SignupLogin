@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/tvSemester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Semester"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvMoed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moed"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnDownloadExam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download Exam"/>
+
+        <Button
+            android:id="@+id/btnDownloadSolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download Solution"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</LinearLayout>

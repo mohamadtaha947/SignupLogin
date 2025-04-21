@@ -122,7 +122,7 @@ public class LoginFragment extends Fragment {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(getActivity(), "Successfully login up", Toast.LENGTH_SHORT).show();
-                        gotoAllUsersFragment();
+                        gotoMySubjects();
                     }
 
                 }).addOnFailureListener(new OnFailureListener() {
@@ -151,9 +151,9 @@ public class LoginFragment extends Fragment {
         ft.commit();
     }
 
-    private void gotoAllUsersFragment(){
+    private void gotoMySubjects(){
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.FrameLayoutsMain,new AllUserFragment());
+        ft.replace(R.id.FrameLayoutsMain,new SubjectListFragment());
         ft.commit();
     }
 }
