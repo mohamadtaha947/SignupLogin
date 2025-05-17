@@ -62,6 +62,7 @@ public class SubjectListFragment extends Fragment {
                     subjectList.clear();
                     for (DocumentSnapshot doc : queryDocumentSnapshots) {
                         Subject subject = doc.toObject(Subject.class);
+                        subject.setId(doc.getId());
                         subjectList.add(subject);
                     }
                     adapter.notifyDataSetChanged();

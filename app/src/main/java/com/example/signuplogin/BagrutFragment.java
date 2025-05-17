@@ -53,6 +53,7 @@ public class BagrutFragment extends Fragment {
                     bagrutList.clear();
                     for (DocumentSnapshot doc : queryDocumentSnapshots) {
                         Bagrut b = doc.toObject(Bagrut.class);
+//                        b.setId(doc.getId());
                         bagrutList.add(b);
                     }
 

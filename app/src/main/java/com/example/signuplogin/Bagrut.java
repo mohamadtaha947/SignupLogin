@@ -1,6 +1,7 @@
 package com.example.signuplogin;
 
 public class Bagrut {
+    private String id;
     private String moed;
     private String semester;
     private String bagrutFileUrl;
@@ -15,6 +16,14 @@ public class Bagrut {
         this.semester = semester;
         this.bagrutFileUrl = bagrutFileUrl;
         this.solutionFileUrl = solutionFileUrl;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     // Getters and setters

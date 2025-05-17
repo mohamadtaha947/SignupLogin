@@ -47,6 +47,7 @@ public class AllSubjectsFragment extends Fragment {
                     allSubjects.clear();
                     for (DocumentSnapshot doc : snapshot.getDocuments()) {
                         Subject subject = doc.toObject(Subject.class);
+                        subject.setId(doc.getId());
                         allSubjects.add(subject);
                     }
 
@@ -61,7 +62,7 @@ public class AllSubjectsFragment extends Fragment {
         fbs.getFire().collection("users")
                 .document(userId)
                 .collection("subjects")
-                .document(subject.getName()) // or another unique ID
+                .document(subject.getId()) // or another unique ID
                 .set(subject)
                 .addOnSuccessListener(aVoid -> {
                     Toast.makeText(getContext(), "Subject added!", Toast.LENGTH_SHORT).show();

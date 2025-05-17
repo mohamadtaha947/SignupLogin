@@ -134,11 +134,7 @@ public class LoginFragment extends Fragment {
             }
         });
     }
-    private void gotoAdduserfragment() {
-        FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.FrameLayoutsMain,new AddUserFragment());
-        ft.commit();
-    }
+
 
     private void gotoSignupFragment() {
         FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();

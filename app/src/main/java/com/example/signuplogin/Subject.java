@@ -3,6 +3,7 @@ package com.example.signuplogin;
 import java.util.List;
 
 public class Subject {
+    private String id;
     private String name;
     private String form;
     private List<Bagrut> bagrutList;
@@ -15,6 +16,14 @@ public class Subject {
         this.name = name;
         this.form = form;
         this.bagrutList = bagrutList;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() { return name; }

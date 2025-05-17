@@ -37,7 +37,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
         holder.itemView.setOnClickListener(v -> {
             Fragment fragment = new BagrutFragment();
             Bundle bundle = new Bundle();
-//            bundle.putString("subjectId", subject.getId()); // or name if using name as doc ID
+            bundle.putString("subjectId", subject.getId()); // or name if using name as doc ID
             fragment.setArguments(bundle);
 
             ((FragmentActivity) v.getContext())
